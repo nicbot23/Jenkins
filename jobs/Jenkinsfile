@@ -1,0 +1,21 @@
+pipeline {
+    agent {label 'develop'}
+
+	enviroment {
+        appName = "variable"
+    }
+
+    stages {
+		stage ('paso 1') {
+            steps{
+				script{
+            		cd C:\nicolas\PROYECTOS EXTERNOS\Jenkins\jobs\dockerweb & java holaMundo.java
+				}
+			
+			} 
+				
+
+        }
+        
+    }
+}

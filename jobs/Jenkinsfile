@@ -6,13 +6,13 @@ pipeline {
     }
 
     stages {
-		stage ('paso 1') {
+	stage ('paso 1') {
             steps{
-				script{
-            		cd C:\nicolas\PROYECTOS EXTERNOS\Jenkins\jobs\dockerweb & java holaMundo.java
-				}
+		script{
+            	 cd ./dockerweb & java holaMundo.java
+		}
 			
-			} 
+	} 
 				
 
         }

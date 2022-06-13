@@ -1,3 +1,8 @@
+import groovy.json.JsonSlurperClassic
+
+def jsonParse(def json) {
+    new groovy.json.JsonSlurperClassic().parseText(json)
+}
 pipeline {
     agent {label 'develop'}
 
@@ -6,16 +11,12 @@ pipeline {
     }
 
     stages {
-	stage ('paso 1') {
-            steps{
-		script{
-            	 cd ./dockerweb & java holaMundo.java
-		}
-			
-	} 
-				
-
-        }
-        
+		stage ('paso 1') {
+			steps{
+				script{
+					cd ./dockerweb & java holaMundo.java
+				}
+			}	
+		} 
     }
 }

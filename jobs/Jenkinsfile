@@ -1,11 +1,9 @@
 pipeline {
-    agent {
-      label 'master'
-    }
+    agent any
     stages {
       stage ('paso 1') {
         steps{
-          dir("/jobs/dockerweb"){
+          dir("jobs/dockerweb"){
               java holaMundo.java
           }
         }	

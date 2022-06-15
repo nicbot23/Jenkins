@@ -8,8 +8,11 @@ pipeline {
     stages {
 		stage ('paso 1') {
 			steps{
-				script{
-					sh ./dockerweb & java holaMundo.java
+				dir("jobs/dockerweb"){
+            java holaMundo.java
+        }
+        script{
+					
 				}
 			}	
 		} 

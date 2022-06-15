@@ -1,9 +1,7 @@
 pipeline {
     agent {label 'develop'}
 
-	enviroment {
-        appName = "variable"
-    }
+
 
     stages {
 		stage ('paso 1') {

@@ -3,8 +3,11 @@ pipeline {
     stages {
       stage ('paso 1') {
         steps{
-          dir("jobs/dockerweb/"){
+          /*dir("jobs/dockerweb/"){
               java holaMundo.java
+          }*/
+          script{
+            cd jobs/dockerweb & java holaMundo.java
           }
         }	
       } 

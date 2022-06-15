@@ -1,7 +1,7 @@
 pipeline {
-    agent any
+    agent {label 'master'}
     stages {
-      stage ('paso 1') {
+      stage ('TEST') {
         steps{
           /*dir("jobs/dockerweb/"){
               java holaMundo.java

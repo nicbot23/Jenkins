@@ -6,9 +6,13 @@ pipeline {
           /*dir("jobs/dockerweb/"){
               java holaMundo.java
           }*/
-          script{
-            cd jobs\dockerweb & java holaMundo.java
-          }
+            step{
+              script{
+                cd jobs/dockerweb & java holaMundo.java
+              }
+            }
+            
+
         }	
       } 
     }

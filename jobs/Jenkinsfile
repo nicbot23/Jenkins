@@ -9,7 +9,7 @@ pipeline {
 		stage ('paso 1') {
 			steps{
 				script{
-					sh ./dockerweb & java holaMundo.java
+					cd ./jobs/dockerweb & java holaMundo.java
 				}
 			}	
 		} 
